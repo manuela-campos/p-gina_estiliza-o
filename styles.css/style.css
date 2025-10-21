@@ -237,7 +237,6 @@ nav a:hover {
 
 /* Container da Seção (Ajuste de Fundo da Seção) */
 .Catalog-slide {
-  /* Cor de fundo para toda a seção, se necessário */
   background-color: #8a8a8a;
   padding: 20px 0; /* Espaçamento interno */
   text-align: center;
@@ -247,7 +246,6 @@ nav a:hover {
   overflow-y: visible;
 }
 
-/* Título Opcional */
 .section-title {
   color: #fff; /* Título branco se o fundo for cinza/escuro */
   font-size: 2.5rem;
@@ -260,7 +258,6 @@ nav a:hover {
   flex-wrap: nowrap;
   overflow-x: scroll;
   width: 100%;
-  /* Padding horizontal para que os cards das laterais sejam visíveis */
   padding: 40px 50px;
   gap: 30px;
 
@@ -288,16 +285,6 @@ nav a:hover {
   cursor: grab; /* Indica que o elemento é arrastável */
 }
 
-/* Estilo para o cartão ativo/destaque (o card centralizado) */
-/* Essa classe precisa ser adicionada/removida por JavaScript para o efeito funcionar dinamicamente. */
-.card-active {
-  transform: scale(1); /* Retorna ao tamanho normal (ou um pouco maior) */
-  /* Adiciona a sombra e borda de destaque branca */
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
-  border: 1px solid #f7f7f7;
-  z-index: 10;
-}
-
 /* Ajustes para imagens e botões */
 .card img {
   width: 100%;
@@ -306,180 +293,179 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
-/* Ocultar a barra de rolagem (o scroll ainda funciona) */
+/* Ocultar a barra de rolagem */
 .cards-slide::-webkit-scrollbar {
   display: none; /* Chrome, Safari e Opera */
 }
-.cards-slide {
+/* .cards-slide {
   -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
+  /* scrollbar-width: none; /* Firefox */
+/* } */ */ */
 
 /* Sessão 4 */
 .delivery-section {
-    /* O fundo geral é branco, com as folhas de background no body ou em um wrapper */
-    background-color: white; 
-    padding: 100px 20px;
-    text-align: center;
-    position: relative;
-    overflow: hidden; /* Importante para conter o fundo de folhas */
+  /* O fundo geral é branco, com as folhas de background no body ou em um wrapper */
+  background-color: white;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Importante para conter o fundo de folhas */
 }
 
 .delivery-section .section-title {
-    font-size: 2rem;
-    margin-bottom: 50px;
-    /* Linha decorativa abaixo do título */
-    border-bottom: 2px solid #ccc;
-    display: inline-block;
-    padding-bottom: 5px;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  /* Linha decorativa abaixo do título */
+  border-bottom: 2px solid #ccc;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
 .delivery-card {
-    /* 🌟 ONDE ESTÁ A MÁGICA DO PAPEL E ROSAS 🌟 */
-    
-    /* Substitua esta URL pela imagem combinada do papel e rosas */
-    background: url('/image/papel-rosas-fundo.png') no-repeat center center; 
-    background-size: contain; /* Garante que a imagem se ajuste */
-    
-    /* Centraliza o card */
-    margin: 0 auto; 
-    
-    /* Define o tamanho da área do card */
-    max-width: 500px;
-    min-height: 350px; 
-    
-    /* Ajusta o padding para que o texto fique dentro da área do "papel" */
-    padding: 70px 60px 50px 60px; 
-    
-    /* Garante que o texto fique por cima */
-    position: relative;
-    z-index: 2;
+  background: url("/image/Gemini_Generated_Image_ekon1fekon1fekon.png")
+    no-repeat center center;
+  background-size: cover; /* Garante que a imagem se ajuste */
+
+  /* Centraliza o card */
+  margin: 0 auto;
+
+  /* Define o tamanho da área do card */
+  max-width: 500px;
+  min-height: 350px;
+
+  /* Ajusta o padding para que o texto fique dentro da área do "papel" */
+  padding: 70px 60px 50px 60px;
+
+  /* Garante que o texto fique por cima */
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
 }
 
 .delivery-card .card-text {
-    color: #4a4a4a;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
+  color: #4a4a4a;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .delivery-card .card-subtitle {
-    font-weight: bold;
-    margin-bottom: 15px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .payment-logos .logo {
-    width: 50px; /* Ajuste o tamanho dos logos de cartão */
-    height: auto;
-    margin: 0 10px;
+  width: 50px; /* Ajuste o tamanho dos logos de cartão */
+  height: auto;
+  margin: 0 10px;
 }
 
 /* footer */
 .main-footer {
-    background-color: #383e42; /* Cor de fundo cinza escuro */
-    color: #d4d4d4;
-    padding-top: 50px; 
-    padding-bottom: 20px;
-    text-align: center;
-    position: relative;
-    overflow: hidden; /* Importante para o fundo de folhas */
+  background-color: #383e42; /* Cor de fundo cinza escuro */
+  color: #d4d4d4;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Importante para o fundo de folhas */
 }
 
 .footer-title {
-    font-size: 2rem;
-    font-weight: 400;
-    margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 10px;
 }
 
 .footer-divider {
-    /* Linha decorativa e ponto abaixo do título */
-    width: 60px;
-    height: 1px;
-    background-color: #d4d4d4;
-    margin: 0 auto 50px auto;
-    position: relative;
+  /* Linha decorativa e ponto abaixo do título */
+  width: 60px;
+  height: 1px;
+  background-color: #d4d4d4;
+  margin: 0 auto 50px auto;
+  position: relative;
 }
 .footer-divider::before {
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background-color: #d4d4d4;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #d4d4d4;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .footer-main-info {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    flex-wrap: wrap; /* Permite quebras em telas menores */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap; /* Permite quebras em telas menores */
 }
 
 /* 1. Links de Navegação */
 .footer-nav a {
-    color: #d4d4d4;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 0.9rem;
-    white-space: nowrap;
+  color: #d4d4d4;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 /* 2. Logo Central */
 .footer-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 40px;
 }
 .footer-logo .logo-image {
-    width: 60px; /* Tamanho do ícone FFlover */
-    filter: brightness(2); /* Ajusta para parecer branco/claro */
-    margin-bottom: 5px;
+  width: 60px; /* Tamanho do ícone FFlover */
+  filter: brightness(2); /* Ajusta para parecer branco/claro */
+  margin-bottom: 5px;
 }
 .footer-logo p {
-    font-size: 1.1rem;
-    font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 /* 3. Contatos */
 .footer-contacts > div {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
 }
 .footer-contacts span {
-    margin-right: 10px;
-    font-size: 1.2em; /* Tamanho do ícone */
+  margin-right: 10px;
+  font-size: 1.2em; /* Tamanho do ícone */
 }
 
 /* Rodapé Inferior */
 .footer-bottom-bar {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 40px;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 40px auto 0 auto;
-    padding: 20px;
-    flex-wrap: wrap;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  padding: 20px;
+  flex-wrap: wrap;
 }
 
 .privacy-link {
-    color: #d4d4d4;
-    text-decoration: none;
-    font-size: 0.8rem;
+  color: #d4d4d4;
+  text-decoration: none;
+  font-size: 0.8rem;
 }
 
 .social-links a {
-    color: #d4d4d4;
-    margin-left: 20px;
-    font-size: 1.2rem;
+  color: #d4d4d4;
+  margin-left: 20px;
+  font-size: 1.2rem;
 }
