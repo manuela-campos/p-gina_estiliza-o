@@ -1,0 +1,485 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  background: #000;
+  margin: 0;
+  padding: 0;
+  height: 100%; /* ocupa a tela inteira */
+}
+
+/* Cabeçalho */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 5px 80px;
+  display: flex;
+  justify-content: space-between; /* distribui os 3 blocos: logo / nav / telefone */
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  /* backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px); */
+  z-index: 10;
+  gap: 60px;
+}
+
+header .logo {
+  width: 120px; /* tamanho da logo  */
+  height: auto; /* mantém a proporção */
+  cursor: pointer;
+}
+
+/* Centraliza nav à direita */
+nav {
+  margin-left: auto; /* empurra a nav para a direita */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #e0b0ff;
+}
+
+.phone {
+  /* font-weight: bold;  */
+  /* margin-left: 25px; separa o telefone do menu */
+  white-space: nowrap;
+}
+
+/* Elementos da sessão */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* conteúdo à direita */
+  padding: 0 40px;
+  position: relative;
+  background: url("/image/sessão1.png") no-repeat right center;
+  background-size: cover;
+  background-attachment: fixed; /* efeito fixo elegante */
+}
+
+/* Camada de escurecimento para destacar texto */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+/* Conteúdo central */
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  text-align: left;
+  padding: 0px -70px; /* topo e laterais */
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* Botões */
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.primary {
+  background: #fff;
+  color: #000;
+}
+
+.secondary {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.secondary:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px;
+    text-align: center;
+  }
+  .content {
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .imagem-container {
+    max-width: 80%;
+    margin-top: 30px;
+  }
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Sessão 2 */
+.leaf-section {
+  position: relative;
+  background-color: #fff;
+  padding: 160px 40px; /* altura mais equilibrada */
+  text-align: center;
+  overflow: hidden; /* 🔧 permite que o próximo conteúdo apareça */
+  min-height: 600px; /* deixa a altura se ajustar automaticamente */
+}
+
+/* Folhas decorativas opcionais */
+.leaf-section::before,
+.leaf-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: url("/image/folhas-top.png") repeat-x;
+  background-size: cover;
+  pointer-events: none; /* não interfere no clique */
+  mix-blend-mode: multiply;
+}
+
+.leaf-section::before {
+  top: 0;
+}
+
+.leaf-section::after {
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+/* garante que o conteúdo fique acima das folhas */
+.leaf-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.leaf-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #111;
+  font-weight: 600;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.icon-item {
+  max-width: 180px;
+  text-align: center;
+}
+
+.icon-item img {
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+.icon-item p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Sessão 3 */
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Container da Seção (Ajuste de Fundo da Seção) */
+.Catalog-slide {
+  /* Cor de fundo para toda a seção, se necessário */
+  background-color: #8a8a8a;
+  padding: 20px 0; /* Espaçamento interno */
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+/* Título Opcional */
+.section-title {
+  color: #fff; /* Título branco se o fundo for cinza/escuro */
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Container que permite a rolagem */
+.cards-slide {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  width: 100%;
+  /* Padding horizontal para que os cards das laterais sejam visíveis */
+  padding: 40px 50px;
+  gap: 30px;
+
+  scroll-snap-type: x mandatory;
+  margin: 0 auto; /* Centraliza o container na tela */
+  /* max-width: 100vw; Garante que ele ocupe toda a largura */
+}
+
+/* Estilos básicos para o cartão */
+.card {
+  /* Define o tamanho base para o card, forçando a rolagem */
+  flex: 0 0 250px;
+  scroll-snap-align: center; /* Garante que o scroll pare no centro do card */
+
+  background-color: white;
+  padding: 15px;
+  border-radius: 3px;
+
+  /* Transições para o efeito de escala */
+  transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
+
+  /* Estilo Padrão (Os cards nas laterais) */
+  transform: scale(0.85); /* 15% menor */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: grab; /* Indica que o elemento é arrastável */
+}
+
+/* Estilo para o cartão ativo/destaque (o card centralizado) */
+/* Essa classe precisa ser adicionada/removida por JavaScript para o efeito funcionar dinamicamente. */
+.card-active {
+  transform: scale(1); /* Retorna ao tamanho normal (ou um pouco maior) */
+  /* Adiciona a sombra e borda de destaque branca */
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
+  border: 1px solid #f7f7f7;
+  z-index: 10;
+}
+
+/* Ajustes para imagens e botões */
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Ocultar a barra de rolagem (o scroll ainda funciona) */
+.cards-slide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari e Opera */
+}
+.cards-slide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Sessão 4 */
+.delivery-section {
+    /* O fundo geral é branco, com as folhas de background no body ou em um wrapper */
+    background-color: white; 
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Importante para conter o fundo de folhas */
+}
+
+.delivery-section .section-title {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    /* Linha decorativa abaixo do título */
+    border-bottom: 2px solid #ccc;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.delivery-card {
+    /* 🌟 ONDE ESTÁ A MÁGICA DO PAPEL E ROSAS 🌟 */
+    
+    /* Substitua esta URL pela imagem combinada do papel e rosas */
+    background: url('/image/papel-rosas-fundo.png') no-repeat center center; 
+    background-size: contain; /* Garante que a imagem se ajuste */
+    
+    /* Centraliza o card */
+    margin: 0 auto; 
+    
+    /* Define o tamanho da área do card */
+    max-width: 500px;
+    min-height: 350px; 
+    
+    /* Ajusta o padding para que o texto fique dentro da área do "papel" */
+    padding: 70px 60px 50px 60px; 
+    
+    /* Garante que o texto fique por cima */
+    position: relative;
+    z-index: 2;
+}
+
+.delivery-card .card-text {
+    color: #4a4a4a;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.delivery-card .card-subtitle {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.payment-logos .logo {
+    width: 50px; /* Ajuste o tamanho dos logos de cartão */
+    height: auto;
+    margin: 0 10px;
+}
+
+/* footer */
+.main-footer {
+    background-color: #383e42; /* Cor de fundo cinza escuro */
+    color: #d4d4d4;
+    padding-top: 50px; 
+    padding-bottom: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Importante para o fundo de folhas */
+}
+
+.footer-title {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.footer-divider {
+    /* Linha decorativa e ponto abaixo do título */
+    width: 60px;
+    height: 1px;
+    background-color: #d4d4d4;
+    margin: 0 auto 50px auto;
+    position: relative;
+}
+.footer-divider::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #d4d4d4;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer-main-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Permite quebras em telas menores */
+}
+
+/* 1. Links de Navegação */
+.footer-nav a {
+    color: #d4d4d4;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* 2. Logo Central */
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 40px;
+}
+.footer-logo .logo-image {
+    width: 60px; /* Tamanho do ícone FFlover */
+    filter: brightness(2); /* Ajusta para parecer branco/claro */
+    margin-bottom: 5px;
+}
+.footer-logo p {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* 3. Contatos */
+.footer-contacts > div {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.footer-contacts span {
+    margin-right: 10px;
+    font-size: 1.2em; /* Tamanho do ícone */
+}
+
+/* Rodapé Inferior */
+.footer-bottom-bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.privacy-link {
+    color: #d4d4d4;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.social-links a {
+    color: #d4d4d4;
+    margin-left: 20px;
+    font-size: 1.2rem;
+}
