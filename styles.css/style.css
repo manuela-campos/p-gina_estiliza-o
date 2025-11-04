@@ -11,6 +11,8 @@ body {
   margin: 0;
   padding: 0;
   height: 100%; /* ocupa a tela inteira */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Cabeçalho */
@@ -279,10 +281,10 @@ nav a:hover {
   /* Transições para o efeito de escala */
   transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
 
-  /* Estilo Padrão (Os cards nas laterais) */
+  /* Os cards nas laterais */
   transform: scale(0.85); /* 15% menor */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  cursor: grab; /* Indica que o elemento é arrastável */
+  cursor: grab; /* o elemento é arrastável */
 }
 
 /* Ajustes para imagens e botões */
@@ -297,67 +299,101 @@ nav a:hover {
 .cards-slide::-webkit-scrollbar {
   display: none; /* Chrome, Safari e Opera */
 }
-/* .cards-slide {
-  -ms-overflow-style: none; /* IE and Edge */
-  /* scrollbar-width: none; /* Firefox */
-/* } */ */ */
 
 /* Sessão 4 */
-.delivery-section {
-  /* O fundo geral é branco, com as folhas de background no body ou em um wrapper */
-  background-color: white;
-  padding: 100px 20px;
-  text-align: center;
+
+.delivery-content-wrapper {
+  /* Manter para o layout geral */
   position: relative;
-  overflow: hidden; /* Importante para conter o fundo de folhas */
+  width: 100%;
+  overflow: hidden;
 }
 
-.delivery-section .section-title {
-  font-size: 2rem;
-  margin-bottom: 50px;
-  /* Linha decorativa abaixo do título */
-  border-bottom: 2px solid #ccc;
-  display: inline-block;
-  padding-bottom: 5px;
+/* Centralizar o Título "Pagamento" */
+.section-title {
+  color: white; 
+  text-align: center; /* **Centraliza o título** */
+  margin: 0 auto; 
+  font-size: 2em;
+  font-weight: bold;
+  position: static;
+  width: auto;
+  z-index: 2;
 }
 
 .delivery-card {
-  background: url("/image/Gemini_Generated_Image_ekon1fekon1fekon.png")
-    no-repeat center center;
-  background-size: cover; /* Garante que a imagem se ajuste */
-
-  /* Centraliza o card */
-  margin: 0 auto;
-
-  /* Define o tamanho da área do card */
-  max-width: 500px;
-  min-height: 350px;
-
-  /* Ajusta o padding para que o texto fique dentro da área do "papel" */
-  padding: 70px 60px 50px 60px;
-
-  /* Garante que o texto fique por cima */
+  width: 100%;
+  max-width: none;
+  min-height: 70vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   position: relative;
-  z-index: 2;
-  background-color: transparent;
+  background-image: url("/image/Gemini_Generated_Image_ekon1fekon1fekon.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  /* Centralizar o Conteúdo (Texto e Logos) */
+  display: flex;
+  flex-direction: column; /* Organiza os itens em coluna */
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+
+  text-align: center;
+  z-index: 1;
 }
 
-.delivery-card .card-text {
-  color: #4a4a4a;
-  font-size: 1rem;
+.delivery-card::before {
+  /* Manter camada escura para contraste */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+.delivery-card > * {
+  position: relative;
+  z-index: 1;
+  color: white;
+  max-width: 600px;
+  padding: 20px; /* Reduzir padding para que não crie uma área muito grande */
+  background-color: transparent; 
+  border-radius: 0; /* Remover bordas */
+  box-shadow: none; /* Remover sombra */
+  transform: none;
+  margin: 10px 0; /* Adiciona um pequeno espaçamento entre os blocos de texto/logo */
+  width: 100%; /* Permite que o max-width: 600px tenha efeito */
+  box-sizing: border-box; /* Garante que o padding não aumente o max-width */
+}
+
+/* ajusta o texto */
+.card-text {
+  font-size: 1.2rem;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
-.delivery-card .card-subtitle {
-  font-weight: bold;
-  margin-bottom: 15px;
+.card-subtitle {
+  font-size: 1.1rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.payment-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
 }
 
 .payment-logos .logo {
-  width: 50px; /* Ajuste o tamanho dos logos de cartão */
-  height: auto;
+  width: 60px;
   margin: 0 10px;
+  vertical-align: middle;
 }
 
 /* footer */
@@ -424,7 +460,7 @@ nav a:hover {
   margin: 20px 40px;
 }
 .footer-logo .logo-image {
-  width: 60px; /* Tamanho do ícone FFlover */
+  width: 60px; /* Tamanho do ícone da logo */
   filter: brightness(2); /* Ajusta para parecer branco/claro */
   margin-bottom: 5px;
 }
@@ -433,7 +469,7 @@ nav a:hover {
   font-weight: 500;
 }
 
-/* 3. Contatos */
+/* Contatos */
 .footer-contacts > div {
   display: flex;
   align-items: center;
