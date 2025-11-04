@@ -281,10 +281,18 @@ nav a:hover {
   /* Transições para o efeito de escala */
   transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
 
-  /* Os cards nas laterais */
+  /* Os cards nas laterais (mantidos aqui para o estado padrão) */
   transform: scale(0.85); /* 15% menor */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   cursor: grab; /* o elemento é arrastável */
+}
+
+/* Efeito de HOVER (Passar o mouse) */
+/* Quando o mouse estiver sobre o cartão, altere a escala e a sombra. */
+.card:hover {
+  transform: scale(1); /* Volta ao tamanho normal (100%) */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Sombra mais destacada */
+  cursor: pointer; /* Opcional: muda o cursor para indicar que é clicável */
 }
 
 /* Ajustes para imagens e botões */
@@ -311,9 +319,9 @@ nav a:hover {
 
 /* Centralizar o Título "Pagamento" */
 .section-title {
-  color: white; 
+  color: white;
   text-align: center; /* **Centraliza o título** */
-  margin: 0 auto; 
+  margin: 0 auto;
   font-size: 2em;
   font-weight: bold;
   position: static;
@@ -359,7 +367,7 @@ nav a:hover {
   color: white;
   max-width: 600px;
   padding: 20px; /* Reduzir padding para que não crie uma área muito grande */
-  background-color: transparent; 
+  background-color: transparent;
   border-radius: 0; /* Remover bordas */
   box-shadow: none; /* Remover sombra */
   transform: none;
